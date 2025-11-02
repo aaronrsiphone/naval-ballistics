@@ -1,0 +1,23 @@
+name: baseline_equator_east
+description: Baseline eastward launch from the equator.
+model: sixdof
+launch_site:
+  latitude_deg: 0.0
+  longitude_deg: 0.0
+  altitude_m: 5.0
+launch:
+  muzzle_velocity_mps: 850.0
+  elevation_deg: 30.0
+  azimuth_deg: 90.0
+projectile:
+  mass_kg: 118.0
+  diameter_m: 0.508
+  length_m: 1.5
+integrator:
+  method: RK45
+  rtol: 1.0e-8
+  atol: 1.0e-10
+environment:
+  atmosphere: 1976-standard
+  wind_model: none
+  gravity: normal

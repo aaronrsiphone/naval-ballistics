@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "navalballistics"
+version = "0.1.0"
+description = "High-fidelity exterior ballistics toolbox for naval artillery"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Naval Ballistics Team"}
+]
+dependencies = [
+  "numpy>=1.23",
+  "pyyaml>=6.0",
+  "typer>=0.9"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "typer[all]>=0.9"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
