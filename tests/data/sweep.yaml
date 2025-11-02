@@ -1,0 +1,3 @@
+scenarios:
+  - tests/data/baseline.yaml
+  - tests/data/baseline.yaml
