@@ -36,7 +36,7 @@ class NormalGravity(GravityModel):
     """Normal gravity model using the Somigliana formula with free-air correction."""
 
     def __init__(self) -> None:  # pragma: no cover - trivial
-        super().__setattr__("name", "normal")
+        object.__setattr__(self, "name", "normal")
 
     def acceleration(self, position_ecef: np.ndarray) -> np.ndarray:
         latitude = np.arctan2(position_ecef[2], sqrt(position_ecef[0] ** 2 + position_ecef[1] ** 2))
@@ -51,7 +51,7 @@ class PointMassGravity(GravityModel):
     """Gravity model that uses an inverse-square law about Earth's center."""
 
     def __init__(self) -> None:  # pragma: no cover - trivial
-        super().__setattr__("name", "point-mass")
+        object.__setattr__(self, "name", "point-mass")
 
     def acceleration(self, position_ecef: np.ndarray) -> np.ndarray:
         return point_mass_gravity(position_ecef)
